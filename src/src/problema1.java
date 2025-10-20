@@ -20,4 +20,14 @@ public class problema1 {
         return result;
     }
 
+    public static double getAverage(int[] noten) {
+        if (noten.length == 0) return 0;
+        double sum = 0;
+        for (int note : noten) {
+            sum += note;
+        }
+
+        return Math.round((sum / noten.length) * 100.0) / 100.0;
+    }
+
 }
