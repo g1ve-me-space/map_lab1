@@ -45,5 +45,15 @@ public class problema1 {
         return abgerundet;
     }
 
+    public static int getMaxRoundedUp(int[] noten) {
+        int[] abgerundet = getRoundedUp(noten);
+        int max = abgerundet[0];
+        for (int note : abgerundet) {
+            if (note > max) {
+                max = note;
+            }
+        }
+        return max;
+    }
 
 }
