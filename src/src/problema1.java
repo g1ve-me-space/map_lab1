@@ -30,4 +30,20 @@ public class problema1 {
         return Math.round((sum / noten.length) * 100.0) / 100.0;
     }
 
+    public static int[] getRoundedUp(int[] noten) {
+        int[] abgerundet = new int[noten.length];
+        for (int i = 0; i < noten.length; i++) {
+            int note = noten[i];
+            if (note >= 38) {
+                int nextMultipleOf5 = ((note / 5) + 1) * 5;
+                if (nextMultipleOf5 - note < 3) {
+                    note = nextMultipleOf5;
+                }
+            }
+            abgerundet[i] = note;
+        }
+        return abgerundet;
+    }
+
+
 }
